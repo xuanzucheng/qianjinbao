@@ -1,0 +1,924 @@
+/* ==================================================
+   BASIC
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        linear-gradient(
+            rgba(90, 0, 0, 0.96),
+            rgba(90, 0, 0, 0.96)
+        );
+
+    color: #f2d16b;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        "Noto Serif SC",
+        "Songti SC",
+        serif;
+
+    line-height: 1.7;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 24px 6%;
+
+    border-bottom:
+        2px solid #d6b653;
+
+}
+
+
+.institution {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.logo img {
+
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: contain;
+
+}
+
+
+.institution-name h1 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.institution-name p {
+
+    margin: 4px 0 0;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.newspaper-mark {
+
+    text-align: right;
+
+}
+
+
+.newspaper-mark span {
+
+    display: block;
+
+    font-size: 38px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+}
+
+
+.newspaper-mark small {
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+}
+
+
+/* ==================================================
+   MARQUEE
+================================================== */
+
+.marquee-container {
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid #d6b653;
+
+    padding: 13px 0;
+
+}
+
+
+.marquee {
+
+    display: flex;
+
+    width: max-content;
+
+    animation:
+        marquee 35s linear infinite;
+
+}
+
+
+.marquee span {
+
+    margin-right: 100px;
+
+    font-size: 17px;
+
+    letter-spacing: 1px;
+
+}
+
+
+@keyframes marquee {
+
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.navigation {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    border-bottom:
+        1px solid #d6b653;
+
+}
+
+
+.navigation a {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 3px;
+
+    padding: 13px 24px;
+
+    color: #f2d16b;
+
+    text-decoration: none;
+
+    border-left:
+        1px solid #d6b653;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+
+}
+
+
+.navigation a:last-child {
+
+    border-right:
+        1px solid #d6b653;
+
+}
+
+
+.navigation a span {
+
+    font-size: 16px;
+
+}
+
+
+.navigation a small {
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.navigation a:hover {
+
+    background: #d6b653;
+
+    color: #5a0000;
+
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero {
+
+    min-height: 520px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+}
+
+
+.hero-content {
+
+    max-width: 1000px;
+
+}
+
+
+.small-title {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.hero h2 {
+
+    margin: 20px 0;
+
+    font-size:
+        clamp(45px, 8vw, 100px);
+
+    line-height: 1.2;
+
+    text-shadow:
+        3px 3px 0 #250000;
+
+}
+
+
+.gold-line {
+
+    width: 300px;
+
+    max-width: 70%;
+
+    height: 3px;
+
+    background: #d6b653;
+
+    margin: 25px auto;
+
+}
+
+
+.english-title {
+
+    font-size: 21px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.subtitle {
+
+    margin-top: 20px;
+
+    font-size: 16px;
+
+}
+
+
+.subtitle-en {
+
+    font-size: 13px;
+
+    opacity: 0.85;
+
+}
+
+
+/* ==================================================
+   SECTION
+================================================== */
+
+.section {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 75px 30px;
+
+}
+
+
+.section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    border-bottom:
+        2px solid #d6b653;
+
+    padding-bottom: 14px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.section-heading > span {
+
+    font-size: 35px;
+
+    font-weight: bold;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+
+.section-heading p {
+
+    margin: 0;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* ==================================================
+   CONFERENCE NEWS
+================================================== */
+
+.news-list {
+
+    border-top:
+        1px solid #d6b653;
+
+}
+
+
+.news-item {
+
+    display: grid;
+
+    grid-template-columns:
+        150px 1fr;
+
+    gap: 35px;
+
+    padding: 32px 10px;
+
+    border-bottom:
+        1px solid #d6b653;
+
+}
+
+
+.news-date {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.news-content h3 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+}
+
+
+.news-content h4 {
+
+    margin: 3px 0 15px;
+
+    font-size: 12px;
+
+    font-weight: normal;
+
+    letter-spacing: 1px;
+
+}
+
+
+.news-content p {
+
+    margin: 8px 0;
+
+}
+
+
+.english-text {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    opacity: 0.85;
+
+}
+
+
+.news-content a {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #f2d16b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   THE FORWARD
+================================================== */
+
+.featured-issue {
+
+    display: flex;
+
+    gap: 40px;
+
+    padding: 40px;
+
+    border:
+        2px solid #d6b653;
+
+}
+
+
+.issue-number {
+
+    min-width: 170px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-right:
+        1px solid #d6b653;
+
+}
+
+
+.issue-number span {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.issue-number strong {
+
+    font-size: 90px;
+
+    line-height: 1;
+
+}
+
+
+.issue-info h3 {
+
+    margin: 8px 0;
+
+    font-size: 32px;
+
+}
+
+
+.issue-info h4 {
+
+    margin: 0 0 15px;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+}
+
+
+.article-category {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.date {
+
+    opacity: 0.75;
+
+}
+
+
+/* ==================================================
+   BUTTON
+================================================== */
+
+.gold-button {
+
+    display: inline-block;
+
+    padding: 11px 23px;
+
+    border:
+        2px solid #d6b653;
+
+    color: #f2d16b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.2s,
+        color 0.2s;
+
+}
+
+
+.gold-button:hover {
+
+    background: #d6b653;
+
+    color: #5a0000;
+
+}
+
+
+/* ==================================================
+   ARCHIVE
+================================================== */
+
+.archive {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 50px 8%;
+
+    background: #430000;
+
+    border-top:
+        2px solid #d6b653;
+
+    border-bottom:
+        2px solid #d6b653;
+
+}
+
+
+.archive h2 {
+
+    margin: 0;
+
+    font-size: 30px;
+
+}
+
+
+.archive p {
+
+    margin: 3px 0;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+}
+
+
+.archive span,
+.archive small {
+
+    display: block;
+
+}
+
+
+.archive small {
+
+    opacity: 0.8;
+
+}
+
+
+/* ==================================================
+   ARTICLE CARDS
+================================================== */
+
+.article-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.article-card {
+
+    padding: 30px;
+
+    border:
+        1px solid #d6b653;
+
+}
+
+
+.article-card h3 {
+
+    margin-bottom: 0;
+
+    font-size: 24px;
+
+}
+
+
+.article-card h4 {
+
+    margin-top: 0;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: normal;
+
+}
+
+
+.article-card a {
+
+    color: #f2d16b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+}
+
+
+.article-category {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 45px 6%;
+
+    border-top:
+        1px solid #d6b653;
+
+    font-size: 11px;
+
+}
+
+
+footer h3 {
+
+    margin-bottom: 5px;
+
+}
+
+
+.footer-right {
+
+    text-align: right;
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+
+    .header {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        text-align: center;
+
+    }
+
+
+    .institution {
+
+        flex-direction: column;
+
+    }
+
+
+    .newspaper-mark {
+
+        text-align: center;
+
+    }
+
+
+    .navigation a {
+
+        width: 50%;
+
+    }
+
+
+    .hero {
+
+        min-height: 420px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 48px;
+
+    }
+
+
+    .english-title {
+
+        font-size: 15px;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .news-item {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+    }
+
+
+    .featured-issue {
+
+        flex-direction: column;
+
+    }
+
+
+    .issue-number {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #d6b653;
+
+        padding-bottom: 30px;
+
+    }
+
+
+    .article-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .archive {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+    }
+
+
+    .footer-right {
+
+        text-align: left;
+
+    }
+
+}
