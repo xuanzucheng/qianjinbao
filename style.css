@@ -1,8 +1,11 @@
-/* ==================================================
-   BASIC
-================================================== */
+/* =====================================================
+   STUDENT UNITED COORDINATING CONFERENCE
+   Main stylesheet
+   ===================================================== */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -11,914 +14,871 @@ html {
 }
 
 body {
-
-    margin: 0;
-
-    background:
-        linear-gradient(
-            rgba(90, 0, 0, 0.96),
-            rgba(90, 0, 0, 0.96)
-        );
-
-    color: #f2d16b;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        "Noto Serif SC",
-        "Songti SC",
-        serif;
-
+    background: #120807;
+    color: #e7c56a;
+    font-family: Georgia, "Times New Roman", "Noto Serif SC",
+        "Songti SC", serif;
     line-height: 1.7;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-/* ==================================================
+::selection {
+    background: #e7c56a;
+    color: #210907;
+}
+
+
+/* =====================================================
    HEADER
-================================================== */
+   ===================================================== */
 
-.header {
+.site-header {
+    border-bottom: 1px solid #8c682d;
+    background:
+        linear-gradient(
+            90deg,
+            #160807,
+            #280c09 50%,
+            #160807
+        );
+}
+
+.header-inner {
+    max-width: 1280px;
+    margin: auto;
+    padding: 32px 45px;
 
     display: flex;
-
     justify-content: space-between;
+    align-items: flex-end;
+}
 
-    align-items: center;
+.brand-cn {
+    font-size: 32px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
 
-    padding: 24px 6%;
+.brand-en {
+    margin-top: 4px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #b99950;
+}
 
-    border-bottom:
-        2px solid #d6b653;
-
+.edition {
+    text-align: right;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #967c45;
 }
 
 
-.institution {
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+.main-nav {
+    border-bottom: 1px solid #765423;
+    background: #0e0605;
+}
+
+.nav-inner {
+    max-width: 1280px;
+    margin: auto;
 
     display: flex;
-
-    align-items: center;
-
-    gap: 18px;
-
+    justify-content: center;
 }
 
+.nav-inner a {
+    min-width: 150px;
 
-.logo img {
+    padding: 16px 20px;
 
-    width: 70px;
+    text-align: center;
 
-    height: 70px;
+    border-left: 1px solid #402b19;
 
-    object-fit: contain;
-
-}
-
-
-.institution-name h1 {
-
-    margin: 0;
-
-    font-size: 25px;
-
+    font-size: 15px;
     letter-spacing: 2px;
 
+    transition: 0.25s;
 }
 
-
-.institution-name p {
-
-    margin: 4px 0 0;
-
-    font-size: 10px;
-
-    letter-spacing: 2px;
-
+.nav-inner a:last-child {
+    border-right: 1px solid #402b19;
 }
 
-
-.newspaper-mark {
-
-    text-align: right;
-
-}
-
-
-.newspaper-mark span {
-
+.nav-inner a span {
     display: block;
 
-    font-size: 38px;
+    margin-top: 2px;
 
-    font-weight: bold;
+    font-size: 8px;
+    letter-spacing: 1.5px;
 
-    line-height: 1.2;
+    color: #806b43;
+}
 
+.nav-inner a:hover,
+.nav-inner a.active {
+    background: #71130e;
+    color: #f0d47c;
 }
 
 
-.newspaper-mark small {
+/* =====================================================
+   MOTTO
+   ===================================================== */
+
+.motto {
+    text-align: center;
+
+    padding: 30px 20px;
+
+    border-bottom: 1px solid #765423;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.015),
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+}
+
+.motto-cn {
+    font-size: 25px;
+    letter-spacing: 6px;
+    font-weight: bold;
+}
+
+.motto-en {
+    margin-top: 4px;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    color: #9f854c;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    max-width: 1280px;
+    margin: auto;
+
+    min-height: 570px;
+
+    padding: 75px 70px;
+
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+
+    border-left: 1px solid #765423;
+    border-right: 1px solid #765423;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(116, 17, 13, 0.55),
+            rgba(20, 7, 6, 0.8)
+        );
+}
+
+.hero-left {
+    padding-top: 20px;
+}
+
+.hero-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #a98b4d;
+}
+
+.hero h1 {
+    margin-top: 22px;
+
+    font-size: clamp(50px, 7vw, 92px);
+
+    line-height: 1.05;
+
+    letter-spacing: 5px;
+
+    color: #e8c96e;
+}
+
+.hero-en {
+    margin-top: 18px;
+
+    font-size: 16px;
+    line-height: 1.4;
 
     letter-spacing: 3px;
 
-    font-size: 10px;
-
+    color: #a88c51;
 }
 
+.hero-line {
+    width: 160px;
+    height: 2px;
 
-/* ==================================================
-   MARQUEE
-================================================== */
+    margin: 30px 0;
 
-.marquee-container {
-
-    overflow: hidden;
-
-    border-bottom:
-        1px solid #d6b653;
-
-    padding: 13px 0;
-
+    background: #a87827;
 }
 
+.hero-description {
+    max-width: 540px;
 
-.marquee {
+    font-size: 15px;
 
-    display: flex;
-
-    width: max-content;
-
-    animation:
-        marquee 35s linear infinite;
-
+    color: #c6a961;
 }
 
-
-.marquee span {
-
-    margin-right: 100px;
-
-    font-size: 17px;
-
-    letter-spacing: 1px;
-
-}
-
-
-@keyframes marquee {
-
-    from {
-        transform: translateX(100vw);
-    }
-
-    to {
-        transform: translateX(-100%);
-    }
-
-}
-
-
-/* ==================================================
-   NAVIGATION
-================================================== */
-
-.navigation {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    border-bottom:
-        1px solid #d6b653;
-
-}
-
-
-.navigation a {
-
-    display: flex;
-
-    flex-direction: column;
-
+.hero-button {
+    display: inline-flex;
+    gap: 18px;
     align-items: center;
 
-    gap: 3px;
+    margin-top: 35px;
 
     padding: 13px 24px;
 
-    color: #f2d16b;
+    border: 1px solid #c59a43;
 
-    text-decoration: none;
+    background: #68120e;
 
-    border-left:
-        1px solid #d6b653;
+    font-size: 13px;
+    letter-spacing: 2px;
 
-    transition:
-        background 0.2s,
-        color 0.2s;
+    transition: 0.25s;
+}
 
+.hero-button span {
+    font-size: 9px;
+    color: #b69655;
+}
+
+.hero-button:hover {
+    background: #971b14;
+    transform: translateX(5px);
 }
 
 
-.navigation a:last-child {
+/* =====================================================
+   HERO PORTRAIT / VISUAL
+   ===================================================== */
 
-    border-right:
-        1px solid #d6b653;
+.hero-right {
+    display: flex;
+    flex-direction: column;
 
+    align-items: center;
+    justify-content: center;
 }
 
+.portrait-frame {
+    width: 270px;
+    height: 350px;
 
-.navigation a span {
+    padding: 12px;
 
-    font-size: 16px;
+    border: 1px solid #a8792e;
 
+    background: #050303;
+
+    box-shadow:
+        0 0 0 6px #1a0b08,
+        0 0 0 7px #704f25;
 }
 
-
-.navigation a small {
-
-    font-size: 8px;
-
-    letter-spacing: 1.5px;
-
-}
-
-
-.navigation a:hover {
-
-    background: #d6b653;
-
-    color: #5a0000;
-
-}
-
-
-/* ==================================================
-   HERO
-================================================== */
-
-.hero {
-
-    min-height: 520px;
+.portrait-placeholder {
+    width: 100%;
+    height: 100%;
 
     display: flex;
-
     justify-content: center;
-
     align-items: center;
 
     text-align: center;
 
-    padding: 80px 20px;
+    background:
+        radial-gradient(
+            circle,
+            #4a1711,
+            #100504 70%
+        );
 
+    filter: grayscale(0.8);
 }
 
-
-.hero-content {
-
-    max-width: 1000px;
-
-}
-
-
-.small-title {
-
-    font-size: 12px;
-
-    letter-spacing: 5px;
-
-}
-
-
-.hero h2 {
-
-    margin: 20px 0;
-
-    font-size:
-        clamp(45px, 8vw, 100px);
-
-    line-height: 1.2;
-
-    text-shadow:
-        3px 3px 0 #250000;
-
-}
-
-
-.gold-line {
-
-    width: 300px;
-
-    max-width: 70%;
-
-    height: 3px;
-
-    background: #d6b653;
-
-    margin: 25px auto;
-
-}
-
-
-.english-title {
-
-    font-size: 21px;
-
-    letter-spacing: 5px;
-
-}
-
-
-.subtitle {
-
-    margin-top: 20px;
-
-    font-size: 16px;
-
-}
-
-
-.subtitle-en {
-
-    font-size: 13px;
-
-    opacity: 0.85;
-
-}
-
-
-/* ==================================================
-   SECTION
-================================================== */
-
-.section {
-
-    max-width: 1150px;
-
-    margin: auto;
-
-    padding: 75px 30px;
-
-}
-
-
-.section-heading {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 20px;
-
-    border-bottom:
-        2px solid #d6b653;
-
-    padding-bottom: 14px;
-
-    margin-bottom: 35px;
-
-}
-
-
-.section-heading > span {
-
-    font-size: 35px;
+.portrait-text {
+    font-size: 24px;
 
     font-weight: bold;
 
+    letter-spacing: 4px;
+
+    line-height: 1.2;
+
+    color: #b89045;
+}
+
+.portrait-caption {
+    margin-top: 22px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+}
+
+.portrait-caption span {
+    font-size: 8px;
+    color: #77613a;
 }
 
 
-.section-heading h2 {
+/* =====================================================
+   GENERAL SECTION
+   ===================================================== */
 
-    margin: 0;
+.section {
+    max-width: 1280px;
 
-    font-size: 30px;
+    margin: auto;
 
+    padding: 70px;
+
+    border: 1px solid #765423;
+    border-top: none;
 }
 
+.section-heading {
+    display: flex;
 
-.section-heading p {
+    justify-content: space-between;
+    align-items: flex-end;
 
-    margin: 0;
+    padding-bottom: 18px;
+
+    border-bottom: 2px solid #8e682a;
+}
+
+.section-cn {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.section-en {
+    margin-top: -4px;
 
     font-size: 10px;
-
     letter-spacing: 3px;
 
+    color: #937847;
+}
+
+.section-heading > a {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #a98b4d;
+}
+
+.section-heading > a:hover {
+    color: #efd37a;
 }
 
 
-/* ==================================================
-   CONFERENCE NEWS
-================================================== */
+/* =====================================================
+   NEWS
+   ===================================================== */
 
 .news-list {
-
-    border-top:
-        1px solid #d6b653;
-
+    margin-top: 15px;
 }
 
-
 .news-item {
+    min-height: 150px;
 
     display: grid;
 
-    grid-template-columns:
-        150px 1fr;
-
-    gap: 35px;
-
-    padding: 32px 10px;
-
-    border-bottom:
-        1px solid #d6b653;
-
-}
-
-
-.news-date {
-
-    font-family:
-        "Courier New",
-        monospace;
-
-    font-size: 14px;
-
-    letter-spacing: 1px;
-
-}
-
-
-.news-content h3 {
-
-    margin: 0;
-
-    font-size: 25px;
-
-}
-
-
-.news-content h4 {
-
-    margin: 3px 0 15px;
-
-    font-size: 12px;
-
-    font-weight: normal;
-
-    letter-spacing: 1px;
-
-}
-
-
-.news-content p {
-
-    margin: 8px 0;
-
-}
-
-
-.english-text {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    opacity: 0.85;
-
-}
-
-
-.news-content a {
-
-    display: inline-block;
-
-    margin-top: 10px;
-
-    color: #f2d16b;
-
-    text-decoration: none;
-
-    font-size: 13px;
-
-}
-
-
-/* ==================================================
-   THE FORWARD
-================================================== */
-
-.featured-issue {
-
-    display: flex;
-
-    gap: 40px;
-
-    padding: 40px;
-
-    border:
-        2px solid #d6b653;
-
-}
-
-
-.issue-number {
-
-    min-width: 170px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: center;
+    grid-template-columns: 130px 1fr 50px;
 
     align-items: center;
 
-    border-right:
-        1px solid #d6b653;
+    border-bottom: 1px solid #49331d;
 
+    transition: 0.25s;
 }
 
+.news-item:hover {
+    padding-left: 12px;
+    background: rgba(118, 19, 13, 0.18);
+}
 
-.issue-number span {
+.news-date {
+    display: flex;
+    flex-direction: column;
+
+    padding-right: 25px;
+
+    border-right: 1px solid #51381d;
+
+    text-align: center;
+}
+
+.news-date strong {
+    font-size: 18px;
+}
+
+.news-date span {
+    font-size: 13px;
+    color: #8c713f;
+}
+
+.news-content {
+    padding: 25px 35px;
+}
+
+.news-category {
+    margin-bottom: 5px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+
+    color: #8e713e;
+}
+
+.news-content h2 {
+    font-size: 22px;
+    line-height: 1.35;
+
+    font-weight: normal;
+
+    color: #e4c675;
+}
+
+.news-content p {
+    margin-top: 7px;
 
     font-size: 13px;
 
-    letter-spacing: 3px;
+    color: #9f8957;
+}
 
+.news-arrow {
+    font-size: 25px;
+    color: #a77b2d;
 }
 
 
-.issue-number strong {
+/* =====================================================
+   THE FORWARD
+   ===================================================== */
 
-    font-size: 90px;
+.forward-section {
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 75px 70px;
+
+    border: 1px solid #765423;
+    border-top: none;
+
+    background:
+        linear-gradient(
+            120deg,
+            #360b09,
+            #170706
+        );
+}
+
+.forward-title {
+    padding-bottom: 18px;
+
+    border-bottom: 2px solid #a1742c;
+}
+
+.forward-layout {
+    display: grid;
+
+    grid-template-columns: 0.45fr 1fr;
+
+    gap: 80px;
+
+    margin-top: 50px;
+
+    align-items: center;
+}
+
+.forward-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.forward-big {
+    font-size: 180px;
 
     line-height: 1;
 
+    font-weight: bold;
+
+    color: #8c1711;
+
+    text-shadow:
+        3px 3px 0 #c69a43;
 }
 
-
-.issue-info h3 {
-
-    margin: 8px 0;
-
-    font-size: 32px;
-
-}
-
-
-.issue-info h4 {
-
-    margin: 0 0 15px;
-
-    font-size: 14px;
-
-    font-weight: normal;
-
-}
-
-
-.article-category {
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-}
-
-
-.date {
-
-    opacity: 0.75;
-
-}
-
-
-/* ==================================================
-   BUTTON
-================================================== */
-
-.gold-button {
-
-    display: inline-block;
-
-    padding: 11px 23px;
-
-    border:
-        2px solid #d6b653;
-
-    color: #f2d16b;
-
-    text-decoration: none;
-
+.forward-small {
     font-size: 12px;
 
-    letter-spacing: 0.5px;
-
-    transition:
-        background 0.2s,
-        color 0.2s;
-
-}
-
-
-.gold-button:hover {
-
-    background: #d6b653;
-
-    color: #5a0000;
-
-}
-
-
-/* ==================================================
-   ARCHIVE
-================================================== */
-
-.archive {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    gap: 30px;
-
-    padding: 50px 8%;
-
-    background: #430000;
-
-    border-top:
-        2px solid #d6b653;
-
-    border-bottom:
-        2px solid #d6b653;
-
-}
-
-
-.archive h2 {
-
-    margin: 0;
-
-    font-size: 30px;
-
-}
-
-
-.archive p {
-
-    margin: 3px 0;
-
-    font-size: 10px;
+    line-height: 1.5;
 
     letter-spacing: 3px;
 
+    color: #a4864c;
 }
 
-
-.archive span,
-.archive small {
-
-    display: block;
-
-}
-
-
-.archive small {
-
-    opacity: 0.8;
-
-}
-
-
-/* ==================================================
-   ARTICLE CARDS
-================================================== */
-
-.article-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 25px;
-
-}
-
-
-.article-card {
-
-    padding: 30px;
-
-    border:
-        1px solid #d6b653;
-
-}
-
-
-.article-card h3 {
-
-    margin-bottom: 0;
-
-    font-size: 24px;
-
-}
-
-
-.article-card h4 {
-
-    margin-top: 0;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+.forward-description h2 {
+    font-size: 30px;
 
     font-weight: normal;
 
+    letter-spacing: 3px;
 }
 
+.gold-line {
+    width: 100px;
+    height: 2px;
 
-.article-card a {
+    margin: 20px 0;
 
-    color: #f2d16b;
+    background: #ae7d2c;
+}
 
-    text-decoration: none;
+.forward-description p {
+    max-width: 650px;
+
+    font-size: 15px;
+
+    color: #b89c60;
+}
+
+.forward-description .english-text {
+    margin-top: 10px;
 
     font-size: 12px;
 
+    letter-spacing: 1px;
+
+    color: #78613b;
+}
+
+.outline-button {
+    display: inline-flex;
+
+    gap: 15px;
+
+    margin-top: 30px;
+
+    padding: 12px 22px;
+
+    border: 1px solid #9c722d;
+
+    font-size: 12px;
+
+    transition: 0.25s;
+}
+
+.outline-button span {
+    font-size: 8px;
+    color: #80683c;
+}
+
+.outline-button:hover {
+    background: #76150f;
 }
 
 
-.article-category {
+/* =====================================================
+   THREE INFORMATION CARDS
+   ===================================================== */
+
+.three-columns {
+    max-width: 1280px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-left: 1px solid #765423;
+}
+
+.info-card {
+    min-height: 270px;
+
+    padding: 35px;
+
+    border-right: 1px solid #765423;
+    border-bottom: 1px solid #765423;
+
+    background: #150807;
+
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    background: #2b0c09;
+}
+
+.card-number {
+    font-size: 12px;
+    color: #8e6c37;
+}
+
+.card-title {
+    margin-top: 35px;
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+}
+
+.card-en {
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #80663a;
+}
+
+.info-card p {
+    margin-top: 20px;
+
+    font-size: 13px;
+
+    color: #9e8752;
+}
+
+.info-card span {
+    display: block;
+
+    margin-top: 25px;
 
     font-size: 10px;
 
     letter-spacing: 2px;
 
+    color: #c29a4a;
 }
 
 
-/* ==================================================
+/* =====================================================
    FOOTER
-================================================== */
+   ===================================================== */
 
 footer {
+    background: #080303;
+
+    border-top: 2px solid #765423;
+}
+
+.footer-inner {
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 45px 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.footer-brand {
+    font-size: 16px;
+
+    letter-spacing: 2px;
+}
+
+.footer-brand span {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    color: #705b37;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #927743;
+}
+
+.footer-links a:hover {
+    color: #e0bf67;
+}
+
+.footer-bottom {
+    max-width: 1280px;
+
+    margin: auto;
+
+    padding: 18px 70px;
 
     display: flex;
 
     justify-content: space-between;
 
-    gap: 30px;
+    border-top: 1px solid #332316;
 
-    padding: 45px 6%;
+    font-size: 8px;
 
-    border-top:
-        1px solid #d6b653;
+    letter-spacing: 2px;
 
-    font-size: 11px;
-
+    color: #5c4a2d;
 }
 
 
-footer h3 {
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
 
-    margin-bottom: 5px;
+@media (max-width: 800px) {
 
-}
-
-
-.footer-right {
-
-    text-align: right;
-
-}
-
-
-/* ==================================================
-   MOBILE
-================================================== */
-
-@media (max-width: 700px) {
-
-
-    .header {
-
-        flex-direction: column;
-
-        gap: 25px;
-
-        text-align: center;
-
+    .header-inner {
+        padding: 25px;
     }
 
-
-    .institution {
-
-        flex-direction: column;
-
+    .brand-cn {
+        font-size: 22px;
+        letter-spacing: 2px;
     }
 
-
-    .newspaper-mark {
-
-        text-align: center;
-
+    .brand-en {
+        font-size: 8px;
+        letter-spacing: 1px;
     }
 
-
-    .navigation a {
-
-        width: 50%;
-
+    .edition {
+        display: none;
     }
 
+    .nav-inner {
+        flex-wrap: wrap;
+    }
+
+    .nav-inner a {
+        min-width: 33.33%;
+        padding: 12px 5px;
+
+        font-size: 11px;
+    }
+
+    .motto-cn {
+        font-size: 17px;
+        letter-spacing: 2px;
+    }
+
+    .motto-en {
+        font-size: 7px;
+        letter-spacing: 1px;
+    }
 
     .hero {
+        padding: 50px 25px;
 
-        min-height: 420px;
-
+        grid-template-columns: 1fr;
     }
 
-
-    .hero h2 {
-
-        font-size: 48px;
-
+    .hero h1 {
+        font-size: 55px;
     }
 
-
-    .english-title {
-
-        font-size: 15px;
-
-        letter-spacing: 3px;
-
+    .hero-right {
+        margin-top: 50px;
     }
 
+    .section,
+    .forward-section {
+        padding: 50px 25px;
+    }
+
+    .section-cn {
+        font-size: 29px;
+    }
 
     .news-item {
+        grid-template-columns: 75px 1fr 20px;
+    }
 
+    .news-content {
+        padding: 20px;
+    }
+
+    .news-content h2 {
+        font-size: 17px;
+    }
+
+    .news-content p {
+        display: none;
+    }
+
+    .forward-layout {
         grid-template-columns: 1fr;
 
-        gap: 5px;
-
+        gap: 35px;
     }
 
-
-    .featured-issue {
-
-        flex-direction: column;
-
+    .forward-big {
+        font-size: 130px;
     }
 
-
-    .issue-number {
-
-        border-right: none;
-
-        border-bottom:
-            1px solid #d6b653;
-
-        padding-bottom: 30px;
-
-    }
-
-
-    .article-grid {
-
+    .three-columns {
         grid-template-columns: 1fr;
-
     }
 
-
-    .archive {
+    .footer-inner,
+    .footer-bottom {
+        padding: 30px 25px;
 
         flex-direction: column;
 
-        text-align: center;
-
+        gap: 20px;
     }
 
-
-    footer {
-
-        flex-direction: column;
-
+    .footer-links {
+        flex-wrap: wrap;
     }
-
-
-    .footer-right {
-
-        text-align: left;
-
-    }
-
 }
