@@ -1,52 +1,40 @@
-/*
-    Student United Coordinating Conference
-    The Forward
-*/
+document.addEventListener("DOMContentLoaded", function () {
 
+    /* =========================================
+       Highlight current navigation page
+       ========================================= */
 
-/* Pause the slogan when the mouse is over it */
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll(".nav-inner a");
 
-const marquee =
-    document.querySelector(".marquee");
+    navLinks.forEach(function (link) {
 
+        const linkPath = new URL(
+            link.href,
+            window.location.origin
+        ).pathname;
 
-if (marquee) {
-
-    marquee.addEventListener(
-        "mouseenter",
-        () => {
-
-            marquee.style.animationPlayState =
-                "paused";
-
+        if (currentPath === linkPath) {
+            link.classList.add("active");
         }
-    );
+
+    });
 
 
-    marquee.addEventListener(
-        "mouseleave",
-        () => {
+    /* =========================================
+       Simple scroll effect
+       ========================================= */
 
-            marquee.style.animationPlayState =
-                "running";
+    const header = document.querySelector(".site-header");
 
+    window.addEventListener("scroll", function () {
+
+        if (window.scrollY > 30) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
         }
-    );
 
-}
+    });
 
-
-/*
-    Current year in footer
-*/
-
-const year =
-    document.querySelector(".current-year");
-
-
-if (year) {
-
-    year.textContent =
-        new Date().getFullYear();
-
-}
+});
